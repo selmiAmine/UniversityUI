@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(/assets/bg1.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/*
+.navbar {
+    display: flex;
+    padding: 40px 120px;
+    color: white;
+}
+
+.nav-links {
+    flex: 1;
+}
+
+.nav-links ul {
+    margin-left: 50px;
+    display: inline;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline;
+    padding: 8px 25px;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}*/
+
+.navbar {
+    display: flex;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.nav-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;
+    width: 80%;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li {
+    list-style: none;
+    padding: 8px 25px;
+}
+
+.navbar {
+    padding: 20px 120px;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: yellow;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+.button {
+    display: flex;
+}
+
+
+.btn {
+    padding: 10px 20px;
+    border: 0;
+    background: yellow;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.text {
+    color: white;
+    margin: 120px 120px;
+    text-align: center;
+
+}
+
+.text h1 {
+    font-size: 4em;
+    margin-bottom: .3em;
+}
+
+.text span {
+    color: yellow;
+}
+
+.text h3 {
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.group_buttons {
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+}
+
+.discover_me {
+    padding: 10px 30px;
+    font-size: 1.3em;
+    color: black;
+    background-color: yellow;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    animation: coloring 5s ease-in-out forwards infinite;
+}
+
+/* .discover_me:hover {
+    background: white;
+    color: black;
+    animation: coloring 1s ease-in-out forwards infinite;
+} */
+
+@keyframes coloring {
+    0% {
+        background-color: yellow;
+        color: black;
+    }
+
+    50% {
+        background: white;
+        color: black;
+    }
+
+    100% {
+        background: yellow;
+        color: black;
+    }
+}
+
+.icons i:hover {
+    color: yellow;
+    transition: all .5s ease-in-out;
+}
+
+
+
+@media only screen and (min-width: 1850px) {
+    .group_buttons {}
+
+    .text {
+        margin-top: 200px;
+        margin-bottom: 250px;
+    }
+}
+
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.icons div {
+    /* do the padding to space elements in middle then eliminate the top padding */
+    padding: 20px;
+    /* padding-top: 0px; */
+}
+
+
+.navbar .bx {
+    display: none;
+}
+
+
+@media (max-width:925px) {
+    .bx-menu {
+        position: absolute;
+        right: 40px;
+        top: 20px;
+    }
+
+    .navbar .bx {
+        display: block;
+        color: white;
+        margin: 10px 25px;
+        cursor: pointer;
+        font-size: 2em;
+    }
+
+    .nav-links {
+        height: 100vh;
+        width: 50%;
+        background: rgba(0, 0, 0, 1);
+        top: 0;
+        right: -50%;
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: .5s ease;
+    }
+
+    .nav-links li {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-links ul {
+        display: block;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .button {
+        margin-top: 20px;
+    }
+
+    .navbar {
+        padding: 20px 40px;
+    }
+}
+
+
+@media (max-width:790px) {
+    .text h1 {
+        font-size: 2.5em;
+        transition: 1s ease-in-out;
+    }
+}
+
+
+/*  Animations  */
+
+.nav-logo {
+    animation-duration: 1s;
+}
+
+.btn {
+    animation-duration: 1s;
+}
+
+.nav-links ul {
+    animation-duration: 1.2s;
+}
+
+.text h1 {
+    animation-duration: 1.5s;
+}
+
+.text h3 {
+    animation-duration: .5s;
+    animation-delay: 1.5s;
+}
+
+.icons {
+    animation-delay: 1s;
+    animation-duration: 2s;
+
+}
